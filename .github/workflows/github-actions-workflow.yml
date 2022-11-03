@@ -16,7 +16,7 @@ jobs:
 
       # Use Action located in https://github.com/actions
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
 
@@ -37,6 +37,21 @@ jobs:
       #   with:
       #     dotnet-version: '3.x'
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      # - run: npm test
+
+      - name: Build
+        run: npm run build -- --prod
+
+      - name: Lint
+        run: npm run lint
+
+      # - name: Test
+      #   run: npm run test -- --prod
+
       #
       #
 
@@ -51,9 +66,9 @@ jobs:
 
       - run: echo "This job's status is ${{ job.status }}."
 
-  Second-Job:
-    name: The second job running on another runner
-    runs-on: windows-latest
-    needs: Example-Actions-Job
-    steps:
-      - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
+  # Second-Job:
+  #   name: The second job running on another runner
+  #   runs-on: windows-latest
+  #   needs: Example-Actions-Job
+  #   steps:
+  #     - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
