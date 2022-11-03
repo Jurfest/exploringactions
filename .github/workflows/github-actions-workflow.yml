@@ -62,7 +62,8 @@ jobs:
       #   run: dotnet --version
 
       - name: Deploy Angular
-        run: npm run deploy
+        run: |
+          npm run deploy
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
 
