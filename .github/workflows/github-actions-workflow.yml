@@ -61,6 +61,22 @@ jobs:
       # - name: Display dotnet version
       #   run: dotnet --version
 
+      - name: Deploy Angular
+        run: npm run deploy
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+
+      #
+      # - name: Create Release
+      #   uses: actions/create-release@v1
+      #   if: ${{ steps.changelog.outputs.skipped == 'false' }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB_ACTION }}
+      #   with:
+      #     tag_name: ${{ steps.changelog.outputs.tag }}
+      #     release_name: ${{ steps.changelog.outputs.tag }}
+      #     body: ${{ steps.changelog.outputs.clean_changelog }}
+
       - run: echo "The preinstalled tools are located here on the runner ${{ runner.tool_cache }}."
 
       - name: List files in tool cache
