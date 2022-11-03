@@ -37,12 +37,13 @@ jobs:
       #   with:
       #     dotnet-version: '3.x'
 
-      - uses: actions/setup-node@v3
+      - name: Setup Node on runner
+        uses: actions/setup-node@v3
         with:
           node-version: 16
 
       - name: Install Dependencies
-      - run: npm ci
+        run: npm ci
       # - run: npm test
 
       - name: Build
