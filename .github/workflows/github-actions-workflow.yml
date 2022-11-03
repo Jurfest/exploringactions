@@ -40,8 +40,8 @@ jobs:
       #
       #
 
-      - name: Display Angular version
-        run: ng --version
+      # - name: Display dotnet version
+      #   run: dotnet --version
 
       - run: echo "The preinstalled tools are located here on the runner ${{ runner.tool_cache }}."
 
