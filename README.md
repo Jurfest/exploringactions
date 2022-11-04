@@ -1,11 +1,13 @@
 # ExploringActions
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+
 ## Deployed website
 
-[ExploringActions deployed on GitHub](https://jurfest.github.io/exploringactions/) using GitHub Actions.
-[ExploringActions deployed on Azure](https://ngdeploy.azurewebsites.net/) using GitHub Actions.
+- [ExploringActions deployed on GitHub](https://jurfest.github.io/exploringactions/) using GitHub Actions.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+- [ExploringActions deployed on Azure](https://ngdeploy.azurewebsites.net/) using GitHub Actions.
+
 
 ## Development server
 
