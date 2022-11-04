@@ -48,7 +48,7 @@ jobs:
         run: npm run lint
 
       - name: Test
-        run: npm run test:ci --prod
+        run: npm run test:ci --single-run --progress false
 
       #
       #
