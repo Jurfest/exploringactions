@@ -25,13 +25,13 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'exploring-actions'`, () => {
-    expect(app.title).toEqual('exploring-actions');
+  it(`should have as title 'Exploring Actions'`, () => {
+    expect(app.title).toEqual('Exploring Actions');
   });
 
   it('should render title', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('exploring-actions app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Exploring Actions app is running!');
   });
 });
