@@ -64,11 +64,8 @@ jobs:
       - name: Test
         run: npm run test:ci --single-run --progress false
 
-      #
-      #
-
-      # - name: Display dotnet version
-      #   run: dotnet --version
+      - name: Display Angular version
+        run: ng version
 
       # - name: Deploy Angular
       #   run: |
