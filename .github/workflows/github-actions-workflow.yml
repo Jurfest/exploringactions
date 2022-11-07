@@ -1,12 +1,18 @@
 name: GitHub Actions Demo
 on:
   push:
+    branches:
+      - main
 
   pull_request:
+    branches:
+      - main
 
   schedule:
     # At 03:35 on Saturday
     - cron: '35 3 * * 6'
+
+  workflow_dispatch:
 
 jobs:
   Example-Actions-Job:
