@@ -65,7 +65,7 @@ jobs:
         run: npm run test:ci --single-run --progress false
 
       - name: Display Angular version
-        run: ng version
+        run: npm run ng version
 
       # - name: Deploy Angular
       #   run: |
