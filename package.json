@@ -45,6 +45,6 @@
     "eslint": "^8.23.1",
     "jest": "28.1.3",
     "typescript": "~4.7.2",
-    "cypress": "latest"
+    "cypress": "^11.0.1"
   }
 }
